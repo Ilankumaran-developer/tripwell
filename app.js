@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const db = require('./dbconfig.js')
 require('./routes.js')(app,db);
-app.listen(2018, function () {
+app.listen(process.env.PORT || 2018, function () {
     console.log('server is started')
     
 })
